@@ -121,11 +121,11 @@ php artisan slower:analyze /*Analyze the records where is_analyzed=false*/
 ```php
 $model = \HalilCosdu\Slower\Models\SlowLog::first();
 
-\HalilCosdu\Slower\Facades\Slower::analyze($model): Model;
+\HalilCosdu\Slower\Facades\Slower::analyze($model);
 
-dd($model->raw_sql); /*select count(*) as aggregate from "product_prices" where "product_id" = '1' and "price" = '0' and "discount_total" > '0'*/
+dump($model->raw_sql); /*select count(*) as aggregate from "product_prices" where "product_id" = '1' and "price" = '0' and "discount_total" > '0'*/
 
-dd($model->recommendation);
+dump($model->recommendation);
 ```
 ### Example Screen
 
